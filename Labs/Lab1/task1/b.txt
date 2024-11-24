@@ -1,0 +1,8 @@
+touch course.txt
+
+echo "CSE321 - Operating System - Section 3" >> course.txt
+echo "CSE420 - Compiler Design - Section 5" >> course.txt
+echo "CSE463 - Computer Vision - Section 1" >> course.txt
+echo "HST103 - Introduction to History - Section 9" >> course.txt
+
+grep -c "CSE" course.txt

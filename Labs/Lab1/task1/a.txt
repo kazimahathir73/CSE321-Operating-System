@@ -1,0 +1,21 @@
+touch 23341066_1.txt 23341066_2.txt 23341066_3.txt 23341066_4.txt
+mkdir Mahathir1 Mahathir2
+
+mv 23341066_1.txt 23341066_2.txt 23341066_3.txt Mahathir1/
+
+cp Mahathir1/23341066_1.txt Mahathir1/23341066_2.txt Mahathir2/
+
+mkdir Mahathir3
+
+cp -r Mahathir1 Mahathir3/
+
+cd Mahathir3
+ls -l
+chmod go=rx *
+
+cd ..
+ls -l
+
+sudo mv Mahathir3 /
+rm -r Mahathir1 Mahathir2
+rm 23341066_4.txt
