@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main() {
     FILE *input, *output;
@@ -9,10 +10,10 @@ int main() {
     output = fopen("output.txt", "w");
 
     char *word = strtok(s, " ");
-    while (token != NULL) {
-        fputs(token, output);
-        fputc(' ', output);
-        token = strtok(NULL, " ");
+    while (word != NULL) {
+        fputs(word, output);
+        fputc(" ", output);
+        word = strtok(NULL, " ");
     }
 
     fclose(input);
