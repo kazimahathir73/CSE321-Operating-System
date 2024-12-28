@@ -4,7 +4,7 @@
 
 int main() {
     FILE *input, *output;
-    char s[200];
+    char s[500];
 
     input = fopen("input.txt", "r");
     output = fopen("output.txt", "w");
@@ -12,8 +12,10 @@ int main() {
     char *word = strtok(s, " ");
     while (word != NULL) {
         fputs(word, output);
-        fputc(" ", output);
         word = strtok(NULL, " ");
+        if (word != NULL) {
+            fputc(' ', output);
+        }
     }
 
     fclose(input);
